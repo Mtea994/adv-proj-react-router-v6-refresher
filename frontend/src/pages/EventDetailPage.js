@@ -3,16 +3,15 @@ import {
   json,
   redirect,
   // useLoaderData,
-  useParams,
+  // useParams,
   useRouteLoaderData,
 } from "react-router-dom";
 import EventItem from "../components/EventItem";
 
 function EventDetailPage() {
   // const data = useLoaderData();
-  const data = useRouteLoaderData("event-details");
-  const params = useParams();
-  const id = params.eventId;
+  const data = useRouteLoaderData("event-detail");
+  console.log(data);
   return <EventItem event={data.event} />;
 }
 
