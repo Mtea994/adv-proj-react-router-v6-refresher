@@ -7,7 +7,6 @@ function NewsletterSignup() {
   const { state, data } = fetcher;
 
   useEffect(() => {
-    window.alert("hi");
     if (state === "idle" && data) {
       window.alert(data.message);
     }
